@@ -12,20 +12,20 @@ interface Props {
 const { title, author, tags = [] } = Astro.props;
 ---
 
-<div class="bg-theme-card shadow-theme relative mx-auto max-w-[368px] rounded-2xl p-4">
+<div class="bg-theme-card shadow-theme relative mx-auto max-w-[368px] rounded-xl px-4 pt-4 pb-5">
   <article>
     <Image
       src={cactus}
       alt={"A beautiful cactus plant in a pot."}
-      class="max-w-full rounded-2xl"
+      class="max-w-full rounded-lg"
       loading={"eager"}
       format="webp"
     />
-    <div class="flex flex-wrap gap-2">
+    <div class="my-4 flex flex-wrap gap-2">
       {
         tags.length > 0 &&
           tags.map((tag) => (
-            <div class="bg-theme-light-purple mt-6 inline-block rounded-full px-3 py-1">
+            <div class="bg-theme-light-purple inline-block rounded-full px-3 py-1">
               <span class="text-theme-purple flex items-center text-[0.625rem] font-bold">
                 {tag}
               </span>
@@ -33,13 +33,13 @@ const { title, author, tags = [] } = Astro.props;
           ))
       }
     </div>
-    <div class="mb-6 py-4">
-      <h1 class="text-theme-dark-blue mb-1 text-lg font-semibold">{title}</h1>
+    <div class="mb-4">
+      <h1 class="text-theme-dark-blue mb-1.5 text-lg font-semibold">{title}</h1>
       <p class="text-theme-slate text-sm">
         <slot />
       </p>
-      <div class="border-theme-light-gray absolute bottom-14 left-0 w-full border-b"></div>
     </div>
-    <p class="text-theme-slate mt-4 pb-1 text-xs">{author}</p>
+    <div class="border-theme-light-gray absolute bottom-13 left-0 w-full border-t"></div>
+    <p class="text-theme-slate pt-5 text-xs">{author}</p>
   </article>
 </div>
