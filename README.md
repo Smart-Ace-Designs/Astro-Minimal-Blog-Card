@@ -73,6 +73,7 @@ I used custom Tailwind CSS theme variables to implement the custom box-shadow pr
 - Flexbox
 - [Astro](https://astro.build/)
 - [Tailwind](https://tailwindcss.com/)
+- Astro [Space](https://github.com/Smart-Ace-Designs/Astro-Space) Template
 
 ## Features
 
