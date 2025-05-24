@@ -38,7 +38,7 @@ const { title, author, tags = [] } = Astro.props;
       <p class="text-theme-slate text-sm">
         <slot />
       </p>
-      <span class="border-theme-light-gray absolute bottom-14 left-0 w-full border-b"></span>
+      <div class="border-theme-light-gray absolute bottom-14 left-0 w-full border-b"></div>
     </div>
     <p class="text-theme-slate mt-4 pb-1 text-xs">{author}</p>
   </article>
