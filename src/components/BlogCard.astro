@@ -13,7 +13,13 @@ const { title, author } = Astro.props;
 
 <div class="bg-theme-card shadow-theme relative mx-auto max-w-[368px] rounded-2xl p-4">
   <article>
-    <Image src={cactus} alt={"A beautiful cactus plant in a pot."} class="max-w-full rounded-2xl" />
+    <Image
+      src={cactus}
+      alt={"A beautiful cactus plant in a pot."}
+      class="max-w-full rounded-2xl"
+      loading={"eager"}
+      format="webp"
+    />
     <div class="bg-theme-light-purple mt-6 inline-block rounded-full px-3 py-1">
       <span class="text-theme-purple flex items-center text-[0.625rem] font-bold">Design</span>
     </div>
