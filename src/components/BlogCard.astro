@@ -2,6 +2,13 @@
 import Image from "astro/components/Image.astro";
 
 import cactus from "@/assets/cactus_img.jpg";
+
+interface Props {
+  title: string;
+  author: string;
+}
+
+const { title, author } = Astro.props;
 ---
 
 <div class="bg-theme-card shadow-theme relative mx-auto max-w-[368px] rounded-2xl p-4">
@@ -12,15 +19,13 @@ import cactus from "@/assets/cactus_img.jpg";
     </div>
     <div>
       <div class="mb-6 py-4">
-        <h1 class="text-theme-dark-blue mb-1 text-lg font-semibold">Embracing Minimalism</h1>
+        <h1 class="text-theme-dark-blue mb-1 text-lg font-semibold">{title}</h1>
         <p class="text-theme-slate text-sm">
-          From minimalist sculptures to minimalist paintings, this blog will inspire you to
-          appreciate the beauty that lies in simplicity.
+          <slot />
         </p>
         <span class="border-theme-light-gray absolute bottom-14 left-0 w-full border-b"></span>
       </div>
     </div>
-
-    <p class="text-theme-slate mt-4 pb-1 text-xs">Annie Spratt</p>
+    <p class="text-theme-slate mt-4 pb-1 text-xs">{author}</p>
   </article>
 </div>
