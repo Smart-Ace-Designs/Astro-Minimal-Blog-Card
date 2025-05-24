@@ -75,7 +75,10 @@ Nothing at this time.
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges-dashboard) challenge.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges-dashboard) challenge. It utilizes:
+
+- Astro component based design
+- Tailwind CSS
 
 ## Acknowledgements
 
@@ -85,4 +88,4 @@ Nothing at this time.
 
 ## Author
 
-- GitHub [@smart-ace-designs](https://github.com/Smart-Ace-Designs)
+GitHub: [@smart-ace-designs](https://github.com/Smart-Ace-Designs)
