@@ -6,9 +6,10 @@ import cactus from "@/assets/cactus_img.jpg";
 interface Props {
   title: string;
   author: string;
+  tags?: string[];
 }
 
-const { title, author } = Astro.props;
+const { title, author, tags } = Astro.props;
 ---
 
 <div class="bg-theme-card shadow-theme relative mx-auto max-w-[368px] rounded-2xl p-4">
@@ -20,8 +21,18 @@ const { title, author } = Astro.props;
       loading={"eager"}
       format="webp"
     />
-    <div class="bg-theme-light-purple mt-6 inline-block rounded-full px-3 py-1">
-      <span class="text-theme-purple flex items-center text-[0.625rem] font-bold">Design</span>
+    <div class="flex flex-wrap gap-2">
+      {
+        Array.isArray(tags) &&
+          tags.length > 0 &&
+          tags.map((tag) => (
+            <div class="bg-theme-light-purple mt-6 inline-block rounded-full px-3 py-1">
+              <span class="text-theme-purple flex items-center text-[0.625rem] font-bold">
+                {tag}
+              </span>
+            </div>
+          ))
+      }
     </div>
     <div>
       <div class="mb-6 py-4">
