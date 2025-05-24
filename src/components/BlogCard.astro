@@ -25,18 +25,15 @@ if (!images[imagePath])
       loading={"eager"}
       format="webp"
     />
-    <div class="my-4 flex flex-wrap gap-2" role="list" aria-label="Article tags">
+    <ul class="my-4 flex flex-wrap gap-2" aria-label="Article tags">
       {
-        tags.length &&
-          tags.map((tag) => (
-            <div class="bg-theme-light-purple inline-block rounded-full px-3 py-1" role="listitem">
-              <span class="text-theme-purple flex items-center text-[0.625rem] font-bold">
-                {tag}
-              </span>
-            </div>
-          ))
+        tags.map((tag) => (
+          <li class="bg-theme-light-purple inline-block rounded-full px-3 py-1">
+            <span class="text-theme-purple flex items-center text-[0.625rem] font-bold">{tag}</span>
+          </li>
+        ))
       }
-    </div>
+    </ul>
     <div class="mb-4">
       <h1 id="article-title" class="text-theme-dark-blue mb-1.5 text-lg font-semibold">{title}</h1>
       <p class="text-theme-slate text-sm">
