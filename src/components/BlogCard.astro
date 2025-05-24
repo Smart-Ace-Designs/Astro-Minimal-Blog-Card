@@ -33,14 +33,12 @@ const { title, author, tags = [] } = Astro.props;
           ))
       }
     </div>
-    <div>
-      <div class="mb-6 py-4">
-        <h1 class="text-theme-dark-blue mb-1 text-lg font-semibold">{title}</h1>
-        <p class="text-theme-slate text-sm">
-          <slot />
-        </p>
-        <span class="border-theme-light-gray absolute bottom-14 left-0 w-full border-b"></span>
-      </div>
+    <div class="mb-6 py-4">
+      <h1 class="text-theme-dark-blue mb-1 text-lg font-semibold">{title}</h1>
+      <p class="text-theme-slate text-sm">
+        <slot />
+      </p>
+      <span class="border-theme-light-gray absolute bottom-14 left-0 w-full border-b"></span>
     </div>
     <p class="text-theme-slate mt-4 pb-1 text-xs">{author}</p>
   </article>
