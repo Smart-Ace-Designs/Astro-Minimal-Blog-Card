@@ -51,7 +51,9 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 <!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge. -->
 
-I learned how to extend the bottom border of a child div across the entire width of the parent div that contains horizontal padding.
+I approached this design as a re-usable card component. The home page only showcases an individual card to meet to the requirements of the challenge, but the card component itself was designed to accept props/slot for content flexibilty. The tag element was set to accept an array to allow for multiple tags to be assigned to the card. This approach, arguably over-engineering the solution, helped me better understand the use of Astro Components.
+
+I used custom Tailwind CSS theme variables to implement the custom box-shadow provided in the design specifications.
 
 ### Useful resources
 
@@ -60,7 +62,8 @@ I learned how to extend the bottom border of a child div across the entire width
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 -->
 
-Nothing at this time.
+- [Astro Components](https://docs.astro.build/en/basics/astro-components/)
+- [Tailwind Theme Variables](https://tailwindcss.com/docs/theme)
 
 ### Built with
 
