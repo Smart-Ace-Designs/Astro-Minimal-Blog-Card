@@ -5,7 +5,13 @@ import BlogCard from "@/components/BlogCard.astro";
 
 <MainLayout title="devChallenges | Minimal Blog Card">
   <div class="flex h-screen items-center justify-center px-4">
-    <BlogCard title="Embracing Minimalism" author="Annie Spratt" tags={["Design"]}>
+    <BlogCard
+      imagePath="/src/assets/cactus_img.jpg"
+      altText="A beautiful cactus plant in a pot."
+      title="Embracing Minimalism"
+      author="Annie Spratt"
+      tags={["Design"]}
+    >
       From minimalist sculptures to minimalist paintings, this blog will inspire you to appreciate
       the beauty that lies in simplicity.
     </BlogCard>
