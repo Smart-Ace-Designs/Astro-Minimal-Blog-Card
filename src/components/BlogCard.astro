@@ -25,7 +25,6 @@ if (!images[imagePath])
       loading={"eager"}
       format="webp"
     />
-
     {
       tags.length > 0 ? (
         <ul class="my-4 flex flex-wrap gap-2" aria-label="Article tags">
@@ -41,14 +40,9 @@ if (!images[imagePath])
         <div class="my-2" />
       )
     }
-
     <h1 id="article-title" class="text-theme-dark-blue mb-1.5 text-lg font-semibold">{title}</h1>
-    <p class="text-theme-slate mb-4 text-sm"><slot /></p>
-    <div
-      class="border-theme-light-gray absolute bottom-13 left-0 w-full border-t"
-      aria-hidden="true"
-    >
-    </div>
-    <p class="text-theme-slate pt-5 text-xs">{author}</p>
+    <p class="text-theme-slate mb-5 text-sm"><slot /></p>
+    <hr class="text-theme-light-gray absolute left-0 w-full" />
+    <p class="text-theme-slate pt-4 text-xs">{author}</p>
   </article>
 </div>
