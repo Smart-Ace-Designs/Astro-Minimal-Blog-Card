@@ -16,7 +16,7 @@ if (!images[imagePath])
   throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 ---
 
-<div class="bg-theme-card shadow-theme relative mx-auto max-w-[368px] rounded-xl px-4 pt-4 pb-5">
+<div class="relative mx-auto max-w-[368px] rounded-xl bg-theme-card px-4 pt-4 pb-5 shadow-theme">
   <article aria-labelledby="article-title">
     <Image
       src={images[imagePath]()}
@@ -29,8 +29,8 @@ if (!images[imagePath])
       tags.length > 0 ? (
         <ul class="my-4 flex flex-wrap gap-2" aria-label="Article tags">
           {tags.map((tag) => (
-            <li class="bg-theme-light-purple inline-block rounded-full px-3 py-1">
-              <span class="text-theme-purple flex items-center text-[0.625rem] font-bold">
+            <li class="inline-block rounded-full bg-theme-light-purple px-3 py-1">
+              <span class="flex items-center text-[0.625rem] font-bold text-theme-purple">
                 {tag}
               </span>
             </li>
@@ -40,9 +40,9 @@ if (!images[imagePath])
         <div class="my-2" />
       )
     }
-    <h1 id="article-title" class="text-theme-dark-blue mb-1.5 text-lg font-semibold">{title}</h1>
-    <p class="text-theme-slate mb-5 text-sm"><slot /></p>
-    <hr class="text-theme-light-gray absolute left-0 w-full" />
-    <p class="text-theme-slate pt-4 text-xs">{author}</p>
+    <h1 id="article-title" class="mb-1.5 text-lg font-semibold text-theme-dark-blue">{title}</h1>
+    <p class="mb-5 text-sm text-theme-slate"><slot /></p>
+    <hr class="absolute left-0 w-full text-theme-light-gray" />
+    <p class="pt-4 text-xs text-theme-slate">{author}</p>
   </article>
 </div>
