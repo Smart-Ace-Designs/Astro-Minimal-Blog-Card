@@ -16,7 +16,7 @@ if (!images[imagePath])
   throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 ---
 
-<div class="relative mx-auto max-w-[368px] rounded-xl bg-theme-card px-4 pt-4 pb-5 shadow-theme">
+<div class="relative mx-auto max-w-92 rounded-xl bg-theme-card px-4 pt-4 pb-5 shadow-theme">
   <article aria-labelledby="article-title">
     <Image
       src={images[imagePath]()}
